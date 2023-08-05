@@ -1,0 +1,53 @@
+\def\version{1}
+\problemname{Apple Delivery}
+
+Ingrid, the apple farmer, has just harvested a huge amount of apples that she intends to give
+to herself and her neighbours. Her neighbourhood can be represented by an infinite plane
+where every point with integer coordinates contains exactly one house. Ingrid's house is
+located at the origin $(0, 0)$. Ingrid has a special strategy when distributing apples. First, she
+selects a list of non negative integers $r_1, r_2, \cdots, r_N$. For each number in the list, she then
+gives one apple to every house within radius $r_i$, i.e. every house whose coordinates satisfy $x^2+y^2 \leq r_i^2$
+(including her own). That way, Ingrid's close neighbours get more apples than
+her distant neighbours
+
+Ingrid has just chosen the list of radii, but then a problem arose. When distributing apples
+she always puts them in cube-shaped boxes with eight apples in each box. Therefore, it is
+very important that the total number of apples distributed is a multiple of eight. Ingrid needs
+to remove some radii from the list so that the number of given apples becomes a multiple of
+eight. It is always possible to do so, for example by removing all radii, but Ingrid does not
+want to appear greedy so she wants to remove radii in a way that minimizes the number of
+apples \textit{not} given among the ones she originally planned to give. Your task is to find this
+minimum.
+
+\section*{Input}
+\noindent
+The first row of input contains the integer, $N$ ($1 \leq N \leq 3 \cdot 10^5$), the number of radii.
+
+The following line contains $N$ space-separated integers $r_1, r_2, \cdots, r_N$, the chosen radii.
+
+\section*{Output}
+\noindent
+Output an integer, the minimum number of apples Ingrid can refrain from distributing by
+removing radii from her list, in such a way that the total number of distributed apples
+becomes a multiple of eight.
+
+\section*{Points}
+\noindent
+Your solution will be tested on a set of test groups, each worth a number of points.
+To get the points for a test group you need to solve all test cases in the test group.
+
+\noindent
+\begin{tabular}{| l | l | l |}
+\hline
+  Group & Points & Limits \\ \hline
+  $1$    & $15$       &  $N \leq 10$, $r_i \leq 300$ for every $i$  \\ \hline 
+  $2$    & $25$       &  $N \leq 3000$, $r_i \leq 1000$ for every $i$ \\ \hline
+  $3$    & $15$       &  $r_i \leq 10^4$ for every $i$ \\ \hline
+  $4$    & $45$       &  No additional constraints \\ \hline
+\end{tabular}
+
+\section*{Explanation of sample 1}
+\noindent
+Within a radius of: 0 there is 1 house, 1 there are 5 houses, and 2 there are 13 houses. In total
+there are thus 26 houses within the radii. By removing the two radii 0 there are 24 remaining
+houses.
