@@ -2,7 +2,7 @@
 PPATH=$(realpath ..)
 . ../../testdata_tools/gen.sh
 
-use_solution joshua_precompute.cpp
+use_solution joshua_full.cpp
 
 compile gen.py
 
