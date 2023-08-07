@@ -1,0 +1,54 @@
+\def\version{1}
+\problemname{Christmas Gifts}
+
+At the Nordic Olympic Institute (NOI) the $S$ students have a tradition of exchanging gifts with
+their friends at christmas. More precisely, if $A$ and $B$ are friends either $A$ gives $B$ a gift or
+$B$ gives $A$ a gift.
+
+Last christmas there was a big scandal at NOI because some of the students received a lot
+of gifts without giving any and some students gave a lot of gifts without receiving any. NOI
+needs your help to make this christmas gift exchange more fair. You need to decide who
+should give gifts to whom, ie. for each friendship between $A$ and $B$, you have to decide if $A$
+should give a gift to $B$ or $B$ should give a gift to $A$.
+
+Let $g_i$ be the number of gifts student $i$ gives, and $r_i$ the number of gifts student $i$ receives.
+The NOI administration has decided a fair gift exchange is one that minimizes the \textit{unfairness}
+score $\Sigma_{i=1}^{S} |g_i-r_it|$.
+
+Given the list of $F$ friendships, compute the minimum possible unfairness score and for each
+friendship write out who should give a gift to whom. Due to GDPR concerns, all students
+have been numbered from $1,\ldots,S$ instead of using their names.
+
+\section*{Input}
+\noindent
+The first row of input contains the integers $S, F$ ($2 \leq S \leq 10^5$, $1 \leq F \leq 2 \cdot 10^5$), the number
+of students and the number of friendships.
+
+The following $F$ lines each contain two integers $A, B$ ($1 \leq A, B \leq S$), meaning that $A$ and $B$ are friends.
+All friendships are mutual and will appear once in the input.
+
+\section*{Output}
+\noindent
+On the first row, output the minimum possible unfairness score.
+On each of the following $F$ lines, output integers $A$ and $B$, meaning that $A$ gives a gift to $B$.
+You can output these in any order, but each friendship must be output exactly once.
+
+\section*{Points}
+\noindent
+Your solution will be tested on a set of test groups, each worth a number of points.
+To get the points for a test group you need to solve all test cases in the test group.
+
+\noindent
+\begin{tabular}{| l | l | p{12cm} |}
+  \hline
+  Group & Points & Limits \\ \hline
+  $1$    & $15$       &  $S \leq 10$, $F \leq 20$  \\ \hline 
+  $2$    & $15$       &  $S \leq 500$, $F \leq 10000$ \\ \hline
+  $3$    & $20$       &  All students have an even number of friends \\ \hline
+  $4$    & $50$       &  No additional constraints \\ \hline
+\end{tabular}
+
+\section*{Explanation of sample 1}
+\noindent
+In this example we have $4$ students and $5$ friendships. The shown solution is not unique - any
+correct solution will be accepted.
