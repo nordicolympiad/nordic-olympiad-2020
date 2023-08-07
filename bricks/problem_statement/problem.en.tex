@@ -8,11 +8,11 @@ The following is an example of a $4 \times 3$ brick formation where $\#$ represe
 represents air:
 
 \noindent
-\begin{lstlisting}[basicstyle=\ttfamily]
+\begin{verbatim}
   #_##
   ##__
   #__#
-\end{lstlisting}
+\end{verbatim}
 
 The game takes place in $N$ rounds. In each round, the player is shown a brick formation that
 she must decide where (horizontally) to drop from the top of the grid. When dropping a brick
@@ -66,7 +66,7 @@ If we simply drop the first brick formation as far to the left as possible witho
 get:
 
 \noindent
-\begin{lstlisting}[basicstyle=\ttfamily]
+\begin{verbatim}
   ______
   ______
   ______
@@ -75,14 +75,14 @@ get:
   ______
   #_____
   ##____
-\end{lstlisting}
+\end{verbatim}
 
 If we then rotate the second brick formation $90$ degrees counter clockwise and drop it as
 long to the left as possible we get: (Xs mark collapsed bricks - they will be gone when the
 next round starts).
 
 \noindent
-\begin{lstlisting}[basicstyle=\ttfamily]
+\begin{verbatim}
   ______
   ______
   ______
@@ -91,13 +91,13 @@ next round starts).
   X_____
   X#____
   X#____
-\end{lstlisting}
+\end{verbatim}
 
 Since the round score in round $2$ is $4$, we obtain $4 \cdot 4 = 16$ points from this. Finally, we rotate
 the last brick formation $180$ degrees, and drop it second most to the left, and get:
 
 \noindent
-\begin{lstlisting}[basicstyle=\ttfamily]
+\begin{verbatim}
   ______
   ______
   ______
@@ -106,7 +106,7 @@ the last brick formation $180$ degrees, and drop it second most to the left, and
   _X_X__
   _X_X__
   _X#X__
-\end{lstlisting}
+\end{verbatim}
 
 The last round score is $2$ and thus we obtain $2 \cdot 7 = 14$ points in this round. In total we got
 $0 + 16 + 14 = 30$ points. This is optimal.
