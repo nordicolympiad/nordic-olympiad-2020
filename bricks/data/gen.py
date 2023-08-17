@@ -26,7 +26,7 @@ def getblock():
         n,m=randint(1,6),randint(1,6)
         rows = []
         for i in range(n):
-            rows.append(list(random.choice(('#','-')) for k in range(m)))
+            rows.append(list(random.choice(('#','_')) for k in range(m)))
         
 
         while len(rows):
